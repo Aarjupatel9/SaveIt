@@ -9,6 +9,7 @@ public class VirtualObjectFallingHandler : MonoBehaviour
     // float fallingSpeed  = .09;
 
     private float initialYPos;
+    private float initialXPos;
     private float resetYPos;
 
     public float fallSpeed = 5f;
@@ -24,6 +25,7 @@ public class VirtualObjectFallingHandler : MonoBehaviour
         // bottomPos = new Vector3(0, -8f - objectSize.y, 10);
 
         initialYPos = transform.position.y;
+        initialXPos = transform.position.x;
         resetYPos = initialYPos;
     }
 

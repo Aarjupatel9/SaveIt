@@ -9,6 +9,7 @@ public class ObjectManager : MonoBehaviour
     public GameObject fixedObjectPrefab;
 
     public static GameObject[] newObjects;
+    private GameObject newObj;
 
     public float PosZFixed = 1f;
     Vector3 objectSize;
@@ -31,7 +32,6 @@ public class ObjectManager : MonoBehaviour
     {
         // virtualObjectCreator.SpawnObject(position);
         // GameObject newObject = Instantiate(objectPrefab, position, Quaternion.identity);
-
 
         Debug.Log("SpawnObject Method is caalled");
 
@@ -77,13 +77,15 @@ public class ObjectManager : MonoBehaviour
         //     );
         // }
 
-        // newObjects[5] = Instantiate(
-        //             objectPrefab,
-        //             new Vector3(.2f, .8f + objectSize.y, PosZFixed),
-        //             Quaternion.identity
-        //         );
 
-
+        if (newObj == null)
+        {
+            newObj = Instantiate(
+                    fixedObjectPrefab,
+                    new Vector3(-.2f, .6f, PosZFixed),
+                    Quaternion.identity
+                );
+        }
 
 
         // newObjects[3] = Instantiate(

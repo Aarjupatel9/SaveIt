@@ -16,7 +16,7 @@ public class FallingObject : MonoBehaviour
         resetYPos = initialYPos;
     }
 
-    void    ()
+    void update()
     {
         transform.Translate(Vector3.down * fallSpeed * Time.deltaTime);
 
